@@ -22,7 +22,8 @@ exports.testamEmAnimais = function() {
 		
 		var $ = cheerio.load(html);
 		var titles = []
-		var produtos = {};
+		var produto = {};
+		var produtos = [];
 
 		$('thead').each(function(i, element){
 			$(element).children().each(function(j, subElement) {
@@ -32,11 +33,13 @@ exports.testamEmAnimais = function() {
 			});     
 		});
 
+		titles.map(title => `'${title}'`).join(',');
 
 		$('tbody tr.goog-ws-list-tableRow').each(function(i, element){
-			produtos.id = i	
+			produto.id = i	
 			$(element).children().each(function(i, subElement) {
-			produtos[titles[i].toString()] = $(subElement).text().toString()
+			produto[titles[i].toString()] = $(subElement).text().toString()
+			produtos.push(produto);
 		});
 		console.log(produtos);      
 	});
