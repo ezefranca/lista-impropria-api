@@ -38,6 +38,7 @@ exports.testamEmAnimais = function() {
 			$(element).children().each(function(i, subElement) {
 			produtos[titles[i].toString()] = $(subElement).text().toString()
 		});
+		console.log("-----------------"); 
 		console.log(produtos);      
 	});
 	accept(produtos);
