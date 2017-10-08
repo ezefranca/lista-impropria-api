@@ -35,10 +35,11 @@ exports.testamEmAnimais = function() {
 
 		$('tbody tr.goog-ws-list-tableRow').each(function(i, element){
 			produtos.id = i	
-			$(element).children().each(function(i, subElement) {
-			produtos[titles[i].toString()] = $(subElement).text().toString()
+			$(element).children().each(function(j, subElement) {
+			produtos[titles[j].toString()] = $(subElement).text().toString()
 		});
 		console.log("-----------------"); 
+		console.log(i); 
 		console.log(produtos);      
 	});
 	accept(produtos);
