@@ -23,7 +23,6 @@ exports.testamEmAnimais = function() {
 		var $ = cheerio.load(html);
 		var titles = []
 		var produtos = {};
-		var results = [];
 
 		$('thead').each(function(i, element){
 			$(element).children().each(function(j, subElement) {
@@ -39,10 +38,8 @@ exports.testamEmAnimais = function() {
 			$(element).children().each(function(i, subElement) {
 			produtos[titles[i].toString()] = $(subElement).text().toString()
 		});
-		console.log(produtos); 
-		results[i] = produtos;   
+		console.log(produtos);      
 	});
-	//console.log(results);  
 	accept(produtos);
 	} else {
         error({ error:"Não foi possível retornar as informações!" });
