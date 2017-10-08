@@ -38,13 +38,14 @@ exports.testamEmAnimais = function() {
 			produtos.id = i	
 			$(element).children().each(function(j, subElement) {
 			produtos[titles[j].toString()] = $(subElement).text().toString()
-		});
-		console.log("-----------------"); 
+
+					console.log("-----------------"); 
 		console.log(i); 
 		results[i] = produtos 
 		console.log("-----------------"); 
 		console.log(results);
-		     
+
+		});		     
 	});
 	console.log("----------------- FINAL -------------------");
 	console.log(results);	
