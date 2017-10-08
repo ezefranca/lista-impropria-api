@@ -38,9 +38,10 @@ exports.testamEmAnimais = function() {
 			produtos.id = i	
 			$(element).children().each(function(i, subElement) {
 			produtos[titles[i].toString()] = $(subElement).text().toString()
-		});   
+		});
+		results[i] = produtos;   
 	});
-	console.log(produtos);  
+	console.log(results);  
 	accept(produtos);
 	} else {
         error({ error:"Não foi possível retornar as informações!" });
