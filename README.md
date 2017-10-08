@@ -27,14 +27,14 @@ list.testamEmAnimais().then(function(tabela) {
 #### Objeto de Retorno
 
 ```js
-[{ 
-  id: 149,
-  Produto: 'Veja ',
-  'Tipo de produto': 'Variado ',
-  Fabricante: 'Reckitt Benckiser ',
-  Segmento: 'Limpeza ',
-  'Adicionado/modificado': '2 de outubro de 2017 ' 
-  }]
+[{
+	"id": 0,
+	"Produto": "Acuvue",
+	"Tipo de produto": "Lentes de Contato",
+	"Fabricante": "Johnson & Johnson",
+	"Segmento": "Saúde",
+	"Adicionado/modificado": "2 de outubro de 2017"
+}]
 ```
 
 #### Objeto de erro
