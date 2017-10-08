@@ -1,6 +1,6 @@
 {
   "name": "lista-impropria-api",
-  "version": "1.0.15",
+  "version": "1.0.55",
   "description": "Lista de empresas e produtos que testam em animais",
   "main": "index.js",
   "scripts": {

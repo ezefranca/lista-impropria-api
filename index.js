@@ -22,34 +22,33 @@ exports.testamEmAnimais = function() {
 		
 		var $ = cheerio.load(html);
 		var titles = []
-		var produtos = {};
-		var results = {};
+		var produto = {};
+		var produtos = [];
 
 		$('thead').each(function(i, element){
 			$(element).children().each(function(j, subElement) {
 				$(subElement).children().each(function(k, subSubElement) {
-					titles[k] = $(subSubElement).text().toString()
+					var title = $(subSubElement).text();
+					titles[k] = String(title).replace(/'/g, '');
+					console.log(String(titles[k]).replace(/'/g, ''));
 				});
 			});     
 		});
 
-
+		var x = 0;
 		$('tbody tr.goog-ws-list-tableRow').each(function(i, element){
-			produtos.id = i	
+			produto['id'] = i	
 			$(element).children().each(function(j, subElement) {
-			produtos[titles[j].toString()] = $(subElement).text().toString()
-
-					console.log("-----------------"); 
-		console.log(i); 
-		results[i] = produtos 
-		console.log("-----------------"); 
-		console.log(results);
-
-		});		     
+				var propriedade = String($(subElement).text()).replace(/2/g, '2')
+				produto[titles[j]] = propriedade.slice(0, -1)
+			});	
+		produtos[x] = produto;
+		produto = {};
+		x++;     
 	});
 	console.log("----------------- FINAL -------------------");
-	console.log(results);	
-	accept(produtos);
+    console.log(produtos.length);
+	accept(JSON.stringify(produtos));
 	} else {
         error({ error:"Não foi possível retornar as informações!" });
     }
