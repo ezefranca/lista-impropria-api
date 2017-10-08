@@ -1,0 +1,25 @@
+{
+  "name": "lista-impropria-api",
+  "version": "1.0.0",
+  "description": "Lista de empresas e produtos que testam em animais",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezefranca/lista-impropria-api.git"
+  },
+  "keywords": [
+    "veganismo",
+    "vista-se",
+    "crueldade",
+    "animal"
+  ],
+  "author": "@ezefranca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezefranca/lista-impropria-api/issues"
+  },
+  "homepage": "https://github.com/ezefranca/lista-impropria-api#readme"
+}
