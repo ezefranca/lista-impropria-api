@@ -22,7 +22,8 @@ exports.testamEmAnimais = function() {
 		
 		var $ = cheerio.load(html);
 		var titles = []
-		var produtos = [];
+		var produtos = {};
+		var results = [];
 
 		$('thead').each(function(i, element){
 			$(element).children().each(function(j, subElement) {
