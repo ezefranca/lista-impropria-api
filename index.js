@@ -33,14 +33,14 @@ exports.testamEmAnimais = function() {
 			});     
 		});
 
-		titles.map(title => `'${title}'`).join(',');
+		titles = titles.map(title => `'${title}'`).join(',');
 
 		$('tbody tr.goog-ws-list-tableRow').each(function(i, element){
-			produto.id = i	
-			$(element).children().each(function(i, subElement) {
-			produto[titles[i].toString()] = $(subElement).text().toString()
-			produtos.push(produto);
-		});
+				produto.id = i	
+				$(element).children().each(function(i, subElement) {
+				produto[titles[i].toString()] = $(subElement).text().toString()
+				});
+				produtos.push(produto);
 		console.log(produtos);      
 	});
 	accept(produtos);
